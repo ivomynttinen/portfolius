@@ -1,0 +1,124 @@
+.popout{
+  z-index: -1;
+  transform: scale(0);
+  opacity: 0;
+  transition: (all .25s cubic-bezier(0.35,1.6,0.7,1));
+
+  &.show{
+    z-index: 9;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.transaction-panel{
+  position: absolute;
+  top: 24px;
+  right: -28px;
+  width: 390px;
+  transform-origin: 75% 0%;
+
+  header{
+    background: $ui-sprite;
+    background-position: -270px -16px;
+    height: 65px;
+    width: 390px;
+    padding: 23px 37px 1px 33px;
+  }
+
+  footer{
+    width: 390px;
+    height: 45px;
+    background: $ui-sprite;
+    background-position: -270px -96px;
+  }
+
+  .content{
+    width: 390px;
+    background: url("../img/dropout-repeat@2x.png") repeat-y;
+    background-size: 390px 5px;
+    padding: 0 37px 0 33px;
+  }
+
+  h2{
+    margin: 0;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.8);
+    font-size: 13px;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  li{
+    position: relative;
+    color: #2C2C2C;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 4px;
+    font-size: 12px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &:active{
+      background: rgba(2,17,33,0.05);
+    }
+  }
+
+  .divider{
+    margin: 8px 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0,0,0,0.05);
+    display: block;
+  }
+}
+
+.transaction-list{
+  padding-top: 5px;
+
+  li{
+    padding: 0 0 0 40px;
+
+    &:before{
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 15px;
+      top: 6px;
+      background: $ui-sprite;
+    }
+
+    &.buy:before{
+      background-position: -80px -173px;
+    }
+
+    &.sell:before{
+      background-position: -80px -203px;
+    }
+
+    &.dividend:before{
+      background-position: -80px -233px;
+    }
+
+    &.deposit:before{
+      background-position: -80px -263px;
+    }
+
+    &.withdraw:before{
+      background-position: -80px -293px;
+    }
+  }
+}
+
+.generic-list{
+  li{
+    padding: 0 0 0 15px;
+  }
+}

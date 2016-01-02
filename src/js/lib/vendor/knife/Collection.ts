@@ -20,7 +20,7 @@ export default class Collection<T> extends EventMachine {
 		this._updateRange()
 	}
 
-	/* Make Collection behave like an array, in ES6 environments
+	//* Make Collection behave like an array, in ES6 environments
 	[Symbol.iterator]() {
 		return this.items[Symbol.iterator]()
 	}

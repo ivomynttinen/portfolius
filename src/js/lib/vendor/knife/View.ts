@@ -39,7 +39,7 @@ export default class View extends EventMachine {
 		this.element.classList.add(this.getComponentName())
 		this._handleClasses(options.classes)
 
-		this.childContainer = this.getChildContainer()
+		this.childContainer = this._createChildContainer()
 
 		this.components = new Collection<Component>()
 		this.components.on('add', (e, component, index) => {
@@ -59,7 +59,7 @@ export default class View extends EventMachine {
 		return document.createElement('div')
 	}
 
-	getChildContainer():HTMLElement {
+	_createChildContainer() {
 		return this.element
 	}
 

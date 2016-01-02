@@ -3,18 +3,19 @@
 import * as knife from '../../vendor/knife/knife'
 
 export default class DropdownView extends knife.View {
-	element:HTMLSpanElement
+	select: HTMLSelectElement
 
 	getComponentName() {
 		return 'Dropdown'
 	}
 
-	_createElement() {
-		return document.createElement('select')
+	_createChildContainer() {
+		this.select = document.createElement('select')
+		return this.select
 	}
 
 	initialize(options) {
-
+		this.element.appendChild(this.select)
 	}
 
 	render() {

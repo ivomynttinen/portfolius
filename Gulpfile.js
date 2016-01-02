@@ -13,15 +13,11 @@ gulp.task('bundle', function(cb) {
 			.pipe(rename('app.js'))
 			.pipe(gulp.dest('app/js/'))
 	})
-})
 
-
-gulp.task("test", function() {
-	gulp.src('tmp/browserInit.js')
-		.pipe(rollup({
-			format: 'iife'
-		}))
-		.pipe(babel())
-		.pipe(rename('app.js'))
-		.pipe(gulp.dest('app/js/'))
+	gulp.src('src/img/**')
+		.pipe(gulp.dest('app/img/'))
+	gulp.watch('src/img/**').on('change', function() {
+		gulp.src('src/img/**')
+			.pipe(gulp.dest('app/img/'))
+	})
 })

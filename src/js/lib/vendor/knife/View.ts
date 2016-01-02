@@ -21,6 +21,20 @@ export default class View extends EventMachine {
 
 		this.element = this._createElement()
 		this.element.classList.add(this.getComponentName())
+		console.log(options.classes)
+		if (typeof options.classes === 'string') {
+			if (~options.classes.indexOf(' ')) {
+				options.classes = options.classes.split(' ')
+			} else {
+				options.classes = [options.classes]
+			}
+		} else if (options.classes == null) {
+			options.classes = []
+		}
+
+		for (let klass of options.classes) {
+			this.element.classList.add(klass)
+		}
 
 		this.childContainer = this.getChildContainer()
 

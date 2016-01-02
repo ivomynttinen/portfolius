@@ -7,3 +7,4 @@ src/.sass-cache/*
 
 .DS_Store
 *.codekit
+npm-debug.log

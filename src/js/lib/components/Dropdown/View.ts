@@ -14,6 +14,11 @@ export default class DropdownView extends knife.View {
 
 	initialize(options) {
 		this.element.appendChild(this.select)
+
+		this.select.addEventListener('change', () => {
+			let option = this.component.children.get(this.select.selectedIndex)
+			this.model.set('selectedOption', option)
+		})
 	}
 
 	render() {

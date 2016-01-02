@@ -11,18 +11,18 @@ export default class ButtonView extends knife.View {
 		return 'Button'
 	}
 
-	initialize(options) {
-		this.label = new Label({ text: options.text });
+	_createElement() {
+		return document.createElement('button')
+	}
 
+	initialize(options) {
 		this.element.addEventListener('click', () => {
 			this.component.sendCommand('Click')
 		})
-
-		this.components.add(this.label)
 	}
 
 	render() {
-		this.label.set('text', this.model.get('text'))
+		this.element.textContent = this.model.get('text')
 
 		super.render()
 		return this

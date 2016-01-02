@@ -65,7 +65,7 @@ export default class WelcomePageView extends knife.View {
 
 		this.innerFooter.children.addRange([
 			this.noteLabel,
-			this.createPortfolioButton
+			this.createPortfolioButton,
 		])
 		this.footer.children.add(this.innerFooter)
 	}
@@ -77,7 +77,7 @@ export default class WelcomePageView extends knife.View {
 
 		this.components.addRange([
 			this.mainContainer,
-			this.footer
+			this.footer,
 		])
 	}
 }

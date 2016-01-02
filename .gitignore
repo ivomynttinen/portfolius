@@ -3,6 +3,7 @@ tmp
 db
 node_modules
 src/.sass-cache
+src/.sass-cache/*
 
 .DS_Store
 *.codekit

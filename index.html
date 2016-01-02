@@ -5,35 +5,20 @@
 	</head>
 	<body>
 		<div class="toolbar">
-      <div class="view-modes">
-        <button class="list" id="toggle-list"></button>
-        <button class="line active" id="toggle-chart"></button>
-      </div>
-      <button class="transaction" id="toggle-transaction">Transaction</button>
-      <div class="transaction-panel popout">
-        <header>
-          <div class="panel-1">
-            <h2>Transactions</h2>
-          </div>
-        </header>
-        <div class="content">
-          <div class="panel-1">
-            <ul class="transaction-list">
-              <li class="buy">Buy</li>
-              <li class="sell">Sell</li>
-              <li class="dividend">Dividend Payment</li>
-              <li class="deposit">Deposit</li>
-              <li class="withdraw">Withdrawal</li>
-            </ul>
-            <span class="divider"></span>
-            <ul class="generic-list">
-              <li>View previews Transactions</li>
-            </ul>
-          </div>
-        </div>
-        <footer></footer>
-      </div>
-    </div>
+			<div class="button-group">
+				<button class="list">
+					<span>Overview</span>
+				</button>
+				<button class="transaction">
+					<span>Transaction</span>
+				</button>
+			</div>
+			<div class="button-group">
+				<button class="history"></button>
+				<button class="chart"></button>
+			</div>
+		</div>
+
 		<script src="app/js/app.js"></script>
 	</body>
 </html>

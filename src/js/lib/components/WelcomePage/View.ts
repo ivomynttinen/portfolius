@@ -9,7 +9,6 @@ import Input from '../Input/Component'
 import Dropdown from '../Dropdown/Component'
 
 export default class WelcomePageView extends knife.View {
-	header:Header
 	mainContainer:Container
 	footer:Container
 	titleLabel:Label
@@ -55,14 +54,11 @@ export default class WelcomePageView extends knife.View {
 	}
 
 	initialize(options) {
-		this.header = new Header({})
-
 		this._buildMainContainer()
 
 		this._buildFooter()
 
 		this.components.addRange([
-			this.header,
 			this.mainContainer,
 			this.footer
 		])

@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node_modules/typescript/bin/tsc -p . --watch & gulp bundle"
   },
-  "author": "Alexander Trefz",
-  "license": "MIT",
+  "author": "Alexander Trefz & Ivo Mynttinen",
+  "license": "",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "gulp": "^3.9.0",

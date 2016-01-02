@@ -1,5 +1,3 @@
-'use strict';
-
 import { IEvent } from './hook/hook'
 import EventMachine from './EventMachine'
 import Component from './Component'

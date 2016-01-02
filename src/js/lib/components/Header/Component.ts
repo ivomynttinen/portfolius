@@ -1,5 +1,3 @@
-'use strict';
-
 import * as knife from '../../vendor/knife/knife'
 
 import HeaderModel      from './Model'

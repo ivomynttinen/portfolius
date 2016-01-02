@@ -1,5 +1,3 @@
-'use strict';
-
 import { IEvent } from './interfaces/IEvent'
 import { NamespacedHandler } from './NamespacedHandler'
 

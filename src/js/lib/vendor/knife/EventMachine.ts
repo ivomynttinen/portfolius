@@ -1,5 +1,3 @@
-'use strict';
-
 import * as hook from './hook/hook'
 
 export default class EventMachine {

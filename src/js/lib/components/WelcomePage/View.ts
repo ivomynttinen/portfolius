@@ -1,5 +1,3 @@
-'use strict';
-
 import * as knife from '../../vendor/knife/knife'
 import Header from '../Header/Component'
 import Container from '../Container/Component'
@@ -34,18 +32,10 @@ export default class WelcomePageView extends knife.View {
 
 		this.currencyDropdown = new Dropdown({ classes: 'currency-dropdown' })
 		this.currencyDropdown.children.addRange([
-			new Option({
-				text: '€ - EUR',
-			}),
-			new Option({
-				text: '$ - USD',
-			}),
-			new Option({
-				text: '£ - GBP',
-			}),
-			new Option({
-				text: '$ - AUD',
-			})
+			new Option({ text: '€ - EUR', }),
+			new Option({ text: '$ - USD', }),
+			new Option({ text: '£ - GBP', }),
+			new Option({ text: '$ - AUD', }),
 		])
 
 		this.mainContainer.children.addRange([
@@ -59,6 +49,7 @@ export default class WelcomePageView extends knife.View {
 	_buildFooter() {
 		this.footer = new Container({ classes: 'footer' })
 		this.innerFooter = new Container({ classes: 'wrap' })
+
 		this.noteLabel = new Label({ text: 'Note: you can adjust this later at any time.' })
 
 		this.createPortfolioButton = new Button({ text: 'Create Portfolio' })
@@ -67,6 +58,7 @@ export default class WelcomePageView extends knife.View {
 			this.noteLabel,
 			this.createPortfolioButton,
 		])
+
 		this.footer.children.add(this.innerFooter)
 	}
 

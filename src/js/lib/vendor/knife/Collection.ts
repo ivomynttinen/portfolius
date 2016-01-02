@@ -1,5 +1,3 @@
-'use strict';
-
 import * as hook from './hook/hook'
 import EventMachine from './EventMachine'
 

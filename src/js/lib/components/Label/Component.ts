@@ -1,5 +1,3 @@
-'use strict';
-
 import * as knife from '../../vendor/knife/knife'
 
 import LabelModel      from './Model'

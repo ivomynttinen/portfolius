@@ -1,5 +1,3 @@
-'use strict';
-
 import EventMachine from './EventMachine'
 import Model from './Model'
 import View from './View'

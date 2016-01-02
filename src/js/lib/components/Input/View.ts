@@ -1,5 +1,3 @@
-'use strict';
-
 import * as knife from '../../vendor/knife/knife'
 
 export default class InputView extends knife.View {
@@ -14,7 +12,7 @@ export default class InputView extends knife.View {
 	}
 
 	initialize(options) {
-
+		// TODO: Implement placeholder
 	}
 
 	render() {

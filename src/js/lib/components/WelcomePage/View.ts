@@ -1,12 +1,14 @@
 'use strict';
 
 import * as knife from '../../vendor/knife/knife'
+import Header from '../Header/Component'
 import Button from '../Button/Component'
 import Label from '../Label/Component'
 import Input from '../Input/Component'
 import Dropdown from '../Dropdown/Component'
 
 export default class WelcomePageView extends knife.View {
+	header:Header
 	titleLabel:Label
 	subtitleLabel:Label
 	nameInput:Input
@@ -20,6 +22,8 @@ export default class WelcomePageView extends knife.View {
 	}
 
 	initialize(options) {
+		this.header = new Header({})
+
 		this.titleLabel    = new Label({ text: 'Welcome to Portfolius!' })
 		this.subtitleLabel = new Label({ text: 'Let\'s set you up and create your first Portfolio.' })
 
@@ -33,6 +37,7 @@ export default class WelcomePageView extends knife.View {
 		this.createPortfolioButton = new Button({ text: 'Create Portfolio' })
 
 		this.components.addRange([
+			this.header,
 			this.titleLabel,
 			this.subtitleLabel,
 			this.nameInput,

@@ -15,12 +15,20 @@ export default class ButtonView extends knife.View {
 
 	initialize(options) {
 		this.element.addEventListener('click', () => {
-			this.component.sendCommand('Click')
+			if (this.model.get('isEnabled')) {
+				this.component.sendCommand('Click')
+			}
 		})
 	}
 
 	render() {
 		this.element.textContent = this.model.get('text')
+
+		if (this.model.get('isEnabled')) {
+			this.element.classList.remove('disabled')
+		} else {
+			this.element.classList.add('disabled')
+		}
 
 		super.render()
 		return this

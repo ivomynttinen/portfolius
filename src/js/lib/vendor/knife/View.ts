@@ -12,6 +12,22 @@ export default class View extends EventMachine {
 	component:Component
 	model:Model
 
+	_handleClasses(classes) {
+		if (typeof classes === 'string') {
+			if (~classes.indexOf(' ')) {
+				classes = classes.split(' ')
+			} else {
+				classes = [classes]
+			}
+		} else if (classes == null) {
+			classes = []
+		}
+
+		for (let klass of classes) {
+			this.element.classList.add(klass)
+		}
+	}
+
 	constructor(options:any = {}, component:Component) {
 		super()
 
@@ -21,19 +37,7 @@ export default class View extends EventMachine {
 
 		this.element = this._createElement()
 		this.element.classList.add(this.getComponentName())
-		if (typeof options.classes === 'string') {
-			if (~options.classes.indexOf(' ')) {
-				options.classes = options.classes.split(' ')
-			} else {
-				options.classes = [options.classes]
-			}
-		} else if (options.classes == null) {
-			options.classes = []
-		}
-
-		for (let klass of options.classes) {
-			this.element.classList.add(klass)
-		}
+		this._handleClasses(options.classes)
 
 		this.childContainer = this.getChildContainer()
 

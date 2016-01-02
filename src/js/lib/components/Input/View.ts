@@ -12,6 +12,9 @@ export default class InputView extends knife.View {
 	}
 
 	initialize(options) {
+		this.element.addEventListener('input', () => {
+			this.model.set('text', this.element.value)
+		})
 		// TODO: Implement placeholder
 	}
 

@@ -14,3 +14,14 @@ gulp.task('bundle', function(cb) {
 			.pipe(gulp.dest('app/js/'))
 	})
 })
+
+
+gulp.task("test", function() {
+	gulp.src('tmp/browserInit.js')
+		.pipe(rollup({
+			format: 'iife'
+		}))
+		.pipe(babel())
+		.pipe(rename('app.js'))
+		.pipe(gulp.dest('app/js/'))
+})

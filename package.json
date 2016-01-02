@@ -1,8 +1,20 @@
 {
-  "name"    : "Portfolius",
-  "version" : "0.1.0",
-  "main"    : "main.js",
+  "name": "Portfolius",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node_modules/typescript/bin/tsc -p . --watch & gulp bundle"
+  },
+  "author": "Alexander Trefz",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^1.6.0",
+    "typescript": "^1.8.0-dev.20151231"
+  },
   "dependencies": {
-    "jquery": "2.1.4"
+    "nedb": "^1.5.1"
   }
 }

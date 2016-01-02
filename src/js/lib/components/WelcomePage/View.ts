@@ -32,10 +32,10 @@ export default class WelcomePageView extends knife.View {
 
 		this.currencyDropdown = new Dropdown({ classes: 'currency-dropdown' })
 		this.currencyDropdown.children.addRange([
-			new Option({ text: '€ - EUR', }),
-			new Option({ text: '$ - USD', }),
-			new Option({ text: '£ - GBP', }),
-			new Option({ text: '$ - AUD', }),
+			new Option({ text: '€ - EUR', value: 'EUR', }),
+			new Option({ text: '$ - USD', value: 'USD', }),
+			new Option({ text: '£ - GBP', value: 'GBP', }),
+			new Option({ text: '$ - AUD', value: 'AUD', }),
 		])
 
 		this.mainContainer.children.addRange([

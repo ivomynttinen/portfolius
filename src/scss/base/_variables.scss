@@ -1,1 +1,22 @@
+// Layout variables
+
+$toolbar-height: 38px;
+$container-height: calc(100vh - 38px);
+
+
+// Color
+
+$link: #046FFF;
+
+
+// Fonts
+
+$sf-light: system, -apple-system, ".SFNSDisplay-Light", "Helvetica Neue", "Lucida Grande";
+$sf-regular: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+$sf-medium: system, -apple-system, ".SFNSDisplay-Medium", "Helvetica Neue", "Lucida Grande";
+$sf-bold: system, -apple-system, ".SFNSDisplay-Bold", "Helvetica Neue", "Lucida Grande";
+
+
+// Sprites
+
 $ui-sprite: url("../img/ui-sprite@2x.png") 0 0 /  1000px 1000px;

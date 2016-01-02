@@ -1,0 +1,11 @@
+.gen-input{
+  border: none;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px #F0F0F0 inset, 0 0 0 0.5px #B1B1B1;
+  padding: 0 6px;
+
+  &:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.5px #2E94FF, 0 0 0 2px #C4E0FF;
+  }
+}

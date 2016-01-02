@@ -6,11 +6,13 @@ import Container from '../Container/Component'
 import Button from '../Button/Component'
 import Label from '../Label/Component'
 import Input from '../Input/Component'
+import Option from '../Option/Component'
 import Dropdown from '../Dropdown/Component'
 
 export default class WelcomePageView extends knife.View {
 	mainContainer:Container
 	footer:Container
+	innerFooter:Container
 	titleLabel:Label
 	subtitleLabel:Label
 	nameInput:Input
@@ -23,14 +25,28 @@ export default class WelcomePageView extends knife.View {
 	}
 
 	_buildMainContainer() {
-		this.mainContainer = new Container({})
+		this.mainContainer = new Container({ classes: 'setup' })
 
-		this.titleLabel    = new Label({ text: 'Welcome to Portfolius!' })
-		this.subtitleLabel = new Label({ text: 'Let\'s set you up and create your first Portfolio.' })
+		this.titleLabel    = new Label({ text: 'Welcome to Portfolius!', classes: 'welcome-headline' })
+		this.subtitleLabel = new Label({ text: 'Let’s set you up and create your first Portfolio.', classes: 'welcome-info' })
 
-		this.nameInput = new Input({ placeholder: 'Portfolio Name' })
+		this.nameInput = new Input({ classes: 'gen-input', placeholder: 'Portfolio Name' })
 
-		this.currencyDropdown = new Dropdown({})
+		this.currencyDropdown = new Dropdown({ classes: 'currency-dropdown' })
+		this.currencyDropdown.children.addRange([
+			new Option({
+				text: '€ - EUR',
+			}),
+			new Option({
+				text: '$ - USD',
+			}),
+			new Option({
+				text: '£ - GBP',
+			}),
+			new Option({
+				text: '$ - AUD',
+			})
+		])
 
 		this.mainContainer.children.addRange([
 			this.titleLabel,
@@ -41,16 +57,17 @@ export default class WelcomePageView extends knife.View {
 	}
 
 	_buildFooter() {
-		this.footer = new Container({})
-
+		this.footer = new Container({ classes: 'footer' })
+		this.innerFooter = new Container({ classes: 'wrap' })
 		this.noteLabel = new Label({ text: 'Note: you can adjust this later at any time.' })
 
 		this.createPortfolioButton = new Button({ text: 'Create Portfolio' })
 
-		this.footer.children.addRange([
+		this.innerFooter.children.addRange([
 			this.noteLabel,
 			this.createPortfolioButton
 		])
+		this.footer.children.add(this.innerFooter)
 	}
 
 	initialize(options) {

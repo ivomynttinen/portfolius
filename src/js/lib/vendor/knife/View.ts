@@ -21,7 +21,6 @@ export default class View extends EventMachine {
 
 		this.element = this._createElement()
 		this.element.classList.add(this.getComponentName())
-		console.log(options.classes)
 		if (typeof options.classes === 'string') {
 			if (~options.classes.indexOf(' ')) {
 				options.classes = options.classes.split(' ')
@@ -67,7 +66,7 @@ export default class View extends EventMachine {
 	hasInvalidComponents():boolean {
 		let result = false
 
-		for (let component of this.components.items) {
+		for (let component of this.components) {
 			if (component.isInvalid) {
 				result = true
 				break
@@ -78,7 +77,7 @@ export default class View extends EventMachine {
 	}
 
 	renderComponents():View {
-		for (let component of this.components.items) {
+		for (let component of this.components) {
 			component.render({ force: true })
 		}
 

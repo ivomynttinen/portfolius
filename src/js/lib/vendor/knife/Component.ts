@@ -76,7 +76,7 @@ export default class Component extends EventMachine {
 			this.view.renderComponents()
 		}
 
-		for (let child of this.children.items) {
+		for (let child of this.children) {
 			child.render()
 		}
 
@@ -86,7 +86,7 @@ export default class Component extends EventMachine {
 	}
 
 	dispose():void {
-		for (let child of this.children.items) {
+		for (let child of this.children) {
 			child.dispose()
 		}
 

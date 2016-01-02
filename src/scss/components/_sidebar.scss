@@ -1,4 +1,4 @@
-#sidebar{
+.sidebar{
 	height: 100%;
 	background: #E0E2E5;
 	width: 270px;
@@ -20,9 +20,26 @@
 		padding-right: 12px;
 		position: relative;
 
-		> span{
+		.name{
+			display: inline-block;
+			max-width: calc(100% - 65px);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.value{
 			font-weight: 600;
 			float: right;
+		}
+
+		input{
+			border: none;
+			position: absolute;
+			left: 46px;
+			top: 3px;
+			width: 222px;
+			height: 20px;
 		}
 
 		&.icon{
@@ -81,6 +98,7 @@
 		font-weight: 600;
 		color: #808080;
 		padding-left: 15px;
+		letter-spacing: 0.3px;
 	}
 
 	footer{

@@ -24,8 +24,9 @@ body {
 	overflow: hidden;
 }
 
-#container{
+.main-container{
 	height: 100%;
+	display: flex;
 }
 
 button{

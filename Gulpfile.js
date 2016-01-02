@@ -3,7 +3,7 @@ var gulp   = require('gulp'),
 	babel  = require("gulp-babel"),
 	rename = require('gulp-rename')
 
-gulp.task('bundle', function(cb) {
+gulp.task('bundle', function() {
 	gulp.watch('tmp/**.js').on('change', function() {
 		gulp.src('tmp/browserInit.js')
 			.pipe(rollup({

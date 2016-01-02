@@ -19,6 +19,7 @@ let db:IDB = {
 	portfolios:      new Datastore({ filename: 'db/portfolios',      autoload: true }),
 }
 
+// TODO: Handle Unexpected Errors via window.onerror
 ;(window as any).db = db
 
 let app = new App()

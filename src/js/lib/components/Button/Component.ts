@@ -15,7 +15,7 @@ export default class Button extends knife.Component {
 
 	initialize(options) {
 		this.model      = new ButtonModel({ text: options.text }, this)
-		this.view       = new ButtonView({ model: this.model }, this)
+		this.view       = new ButtonView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new ButtonController({}, this)
 	}
 

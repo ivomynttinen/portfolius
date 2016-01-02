@@ -13,7 +13,7 @@ export default class WelcomePage extends knife.Component {
 
 	initialize(options) {
 		this.model      = new WelcomePageModel({}, this)
-		this.view       = new WelcomePageView({ model: this.model }, this)
+		this.view       = new WelcomePageView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new WelcomePageController({}, this)
 	}
 }

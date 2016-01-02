@@ -9,7 +9,7 @@ import AppController from './Controller'
 export default class App extends knife.Component {
 	initialize(options = {}) {
 		this.model      = new AppModel({}, this)
-		this.view       = new AppView({ model: this.model }, this)
+		this.view       = new AppView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new AppController({}, this)
 
 		this._initiateRenderSequence()

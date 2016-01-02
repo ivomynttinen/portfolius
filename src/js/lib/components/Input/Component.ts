@@ -9,7 +9,7 @@ import InputController from './Controller'
 export default class Input extends knife.Component {
 	initialize(options) {
 		this.model      = new InputModel({ text: options.text }, this)
-		this.view       = new InputView({ model: this.model }, this)
+		this.view       = new InputView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new InputController({}, this)
 	}
 }

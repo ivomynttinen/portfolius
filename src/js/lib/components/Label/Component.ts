@@ -9,7 +9,7 @@ import LabelController from './Controller'
 export default class Label extends knife.Component {
 	initialize(options) {
 		this.model      = new LabelModel({ text: options.text }, this)
-		this.view       = new LabelView({ model: this.model }, this)
+		this.view       = new LabelView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new LabelController({}, this)
 	}
 }

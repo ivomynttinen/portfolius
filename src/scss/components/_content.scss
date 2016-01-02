@@ -96,6 +96,12 @@
 	bottom: 0;
 	overflow: auto;
 	transition: .3s all ease;
+  background: #FFF;
+
+  > div{
+    background: #FFF;
+    height: 100%;
+  }
 
 	&.collapsed{
 		top: 278px;

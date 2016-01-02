@@ -1,43 +1,43 @@
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 ul, li, span, button, a, div{
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
 }
 
 body{
-  padding-top: 38px;
-  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+	padding-top: 38px;
+	font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
 }
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 #container{
-  height: 100%;
+	height: 100%;
 }
 
 button{
-  border: none;
-  background-color: transparent;
+	border: none;
+	background-color: transparent;
 
-  &:focus{
-    outline: none;
-  }
+	&:focus{
+		outline: none;
+	}
 }
 
 ul{
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }

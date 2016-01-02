@@ -1,81 +1,105 @@
 .toolbar{
-  height: 38px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 99;
-  background-image: linear-gradient(-180deg, #ECECEC 0%, #D4D4D4 100%);
-  box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 1px 1px rgba(255,255,255,0.6);
-  padding-left: 270px;
+	height: 38px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 99;
+	background-image: linear-gradient(-180deg, #ECECEC 0%, #D4D4D4 100%);
+	box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 1px 1px rgba(255,255,255,0.6);
+	padding-left: 270px;
 }
 
 .button-group{
-  position: relative;
-  height: 25px;
-  width: 60px;
-  top: 50%;
-  margin-top: -12.5px;
+	position: relative;
+	height: 25px;
+	width: 60px;
+	top: 50%;
+	margin-top: -12.5px;
 
-  button{
-    width: 29.5px;
-    height: 24px;
-    position: absolute;
-    background: $ui-sprite;
+	&.mode-buttons{
+		width: 170px;
+	}
 
-    &.active{
-      z-index: 2;
-    }
+	&.view-buttons{
+		position: absolute;
+		top: 50%;
+		right: 5px;
 
-    &:active{
-      z-index: 1;
-    }
+		button{
+			width: 29px;
+		}
+	}
 
-    &.list{
-      background-position: -9px -10.5px;
+	button{
+		height: 24px;
+		position: absolute;
+		background: $ui-sprite;
+		color: #313131;
+		font-size: 11px;
 
-      &:active{
-        background-position: -9px -70.5px;
-      }
+		&.active{
+			z-index: 2;
+			color: #FFF;
+		}
 
-      &.active, &.active:focus{
-        background-position: -9px -40.5px;
-      }
-    }
+		&:active{
+			z-index: 1;
+		}
 
-    &.line{
-      background-position: -38px -10.5px;
-      left: 28.5px;
+		&.list{
+			background-position: -209.5px -14px;
+			width: 82px;
+			padding-left: 27px;
 
-      &:active{
-        background-position: -38px -70.5px;
-      }
+			&:active{
+				background-position: -209.5px -74px;
+			}
 
-      &.active, &.active:focus{
-        background-position: -38px -40.5px;
-      }
-    }
-  }
-}
+			&.active, &.active:focus{
+				background-position: -209.5px -44px;
+			}
+		}
 
-.transaction{
-  background: $ui-sprite;
-  background-position: -9px -100px;
-  width: 90px;
-  height: 25px;
-  position: absolute;
-  right: 7px;
-  top: 7px;
-  font-size: 11px;
-  color: #313131;
-  padding: 0 0 2px 16px;
+		&.transaction{
+			background-position: -291px -14px;
+			left: 82px;
+			width: 89px;
+			padding-left: 20px;
 
-  &:active{
-    background-position: -9px -130px;
-  }
+			&:active{
+				background-position: -291px -74px;
+			}
 
-  &.active, &.active:active{
-    background-position: -109px -130px;
-    color: #FFF;
-  }
+			&.active, &.active:focus{
+				background-position: -291px -44px;
+			}
+		}
+
+		&.history{
+			background-position: -9px -10.5px;
+			left: 0;
+
+			&:active{
+				background-position: -9px -70.5px;
+			}
+
+			&.active, &.active:focus{
+				background-position: -9px -40.5px;
+			}
+		}
+
+		&.line{
+			background-position: -38px -10.5px;
+			left: 28.5px;
+
+			&:active{
+				background-position: -38px -70.5px;
+			}
+
+			&.active, &.active:focus{
+				background-position: -38px -40.5px;
+			}
+		}
+	}
 }

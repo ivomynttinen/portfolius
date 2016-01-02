@@ -6,7 +6,7 @@ import ContainerController from './Controller'
 
 export default class Container extends knife.Component {
 	initialize(options) {
-		this.model      = new ContainerModel({ text: options.text }, this)
+		this.model      = new ContainerModel({}, this)
 		this.view       = new ContainerView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new ContainerController({}, this)
 	}

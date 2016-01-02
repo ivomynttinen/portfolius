@@ -1,4 +1,4 @@
-#content{
+.overview-container{
 	width: calc(100% - 270px);
 	float: left;
 	height: 100%;
@@ -245,9 +245,17 @@
 		}
 
 		&.left, &.right{
-			width: 30px;
 			position: relative;
 		}
+
+    &.left{
+      width: 30px;
+    }
+
+    &.right{
+      width: 38px;
+    }
+
 
 		&.wkn, &.current, &.pcs{
 			width: 60px;
@@ -287,8 +295,8 @@
 	}
 
 	.actions{
-		width: 24px;
-		height: 25px;
+		width: 26px;
+		height: 27px;
 		position: absolute;
 		background: $ui-sprite;
 		background-position: -39px -172px;

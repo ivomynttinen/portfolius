@@ -20,12 +20,12 @@ export default class WelcomePage extends knife.Component {
 	}
 
 	_createPortfolio(e, data) {
-		Portfolio.insert(data, (err, doc) => {
+		Portfolio.insert(data, (err, portfolio) => {
 			if (err) {
 				throw err
 			}
 
-			knife.publish('FirstPortfolioCreated')
+			this.trigger('createdFirstPortfolio', portfolio)
 		})
 	}
 }

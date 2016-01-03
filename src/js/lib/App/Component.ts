@@ -10,11 +10,6 @@ export default class App extends knife.Component {
 		this.view       = new AppView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new AppController({}, this)
 
-		knife.subscribe('FirstPortfolioCreated', () => {
-			// TODO: hide WelcomePage
-			// TODO: show MainPage
-		})
-
 		this._initiateRenderSequence()
 	}
 

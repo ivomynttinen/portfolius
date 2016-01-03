@@ -46,18 +46,18 @@ export default class MainPageView extends knife.View {
 		])
 	}
 
-	_buildMainContainer() {
+	_buildMainContainer(options) {
 		this.mainContainer = new Container({ classes: 'main-container' })
 
-		this.sidebar = new Sidebar({})
+		this.sidebar = new Sidebar({ portfolios: options.portfolios })
 
 		this.overviewContainer = new Container({ classes: 'overview-container' })
 
 		this.dark = new Container({ classes: 'dark' })
 
-		this.listsContainer = new Container({ classes: 'lists' })
+		this.listsContainer    = new Container({ classes: 'lists' })
 		this.portfolioOverview = new Container({ classes: 'portfolio-overview hidden' })
-		this.portfolioHistory = new Container({ classes: 'history-container' })
+		this.portfolioHistory  = new Container({ classes: 'history-container' })
 
 		this.listsContainer.children.addRange([
 			this.portfolioOverview,
@@ -78,16 +78,18 @@ export default class MainPageView extends knife.View {
 	initialize(options) {
 		this._buildHeader()
 
-		this._buildMainContainer()
+		this._buildMainContainer(options)
 
-		;(window as any).mainPage = this
-
-		this.sidebar.on('createPortfolio', () => {
-			this.component.sendCommand('CreatePortfolio')
+		this.sidebar.on('createdPortfolio', () => {
+			this.component.trigger('createdPortfolio')
 		})
 
-		this.sidebar.on('removePortfolio', () => {
-			this.component.sendCommand('RemovePortfolio')
+		this.sidebar.on('removedPortfolio', () => {
+			this.component.trigger('removedPortfolio')
+		})
+
+		this.sidebar.on('removedLastPortfolio', () => {
+			this.component.trigger('removedLastPortfolio')
 		})
 
 		this.model.on('set', (e, key, value) => {

@@ -14,16 +14,8 @@ export default class MainPage extends knife.Component {
 	}
 
 	initialize(options) {
-		this.model      = new MainPageModel({}, this)
+		this.model      = new MainPageModel({ portfolios: options.portfolios }, this)
 		this.view       = new MainPageView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new MainPageController({}, this)
-
-		Portfolio.find({}, (err, portfolios) => {
-			if (err != null) {
-				throw err
-			}
-
-			this.model.set('portfolios', portfolios)
-		})
 	}
 }

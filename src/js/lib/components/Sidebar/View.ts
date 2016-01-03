@@ -98,6 +98,11 @@ export default class SidebarView extends knife.View {
 
 			portfolioListItem.on('deletedPortfolio', () => {
 				portfolioListItem.dispose()
+
+				this.trigger('removedPortfolio')
+				if (this.portfolioList.children.count === 0) {
+					this.trigger('removedLastPortfolio')
+				}
 			})
 
 			this.portfolioList.children.add(portfolioListItem)

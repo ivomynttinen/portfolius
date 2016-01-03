@@ -22,5 +22,11 @@ let db:IDB = {
 // TODO: Handle Unexpected Errors via window.onerror
 ;(window as any).db = db
 
-let app = new App()
-document.body.appendChild(app.view.element)
+db.portfolios.find({}, (err, portfolios) => {
+	if (err != null) {
+		throw err
+	}
+
+	let app = new App({ portfolios })
+	document.body.appendChild(app.view.element)
+})

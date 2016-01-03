@@ -77,7 +77,7 @@ export default class WelcomePageView extends knife.View {
 
 		this.createPortfolioButton.on('click', () => {
 			let portfolio = {
-				text:            this.nameInput.get('text'),
+				name:            this.nameInput.get('text'),
 				currency:        this.currencyDropdown.get('selectedOption').get('value'),
 				stockList:       [],
 				transactionList: [],

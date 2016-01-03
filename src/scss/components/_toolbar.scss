@@ -18,14 +18,12 @@
 	margin-top: -12.5px;
 
 	&.mode-buttons{
-		width: 170px;
+		width: 91px;
+		right: 5px;
+		position: absolute;
 	}
 
 	&.view-buttons{
-		position: absolute;
-		top: 50%;
-		right: 5px;
-
 		button{
 			width: 29px;
 		}
@@ -47,10 +45,11 @@
 			z-index: 1;
 		}
 
-		&.list{
+		&.transaction{
 			background-position: -209.5px -14px;
-			width: 82px;
-			padding-left: 27px;
+			left: 0;
+			width: 91px;
+			padding-left: 22px;
 
 			&:active{
 				background-position: -209.5px -74px;
@@ -58,21 +57,6 @@
 
 			&.active, &.active:focus{
 				background-position: -209.5px -44px;
-			}
-		}
-
-		&.transaction{
-			background-position: -291px -14px;
-			left: 82px;
-			width: 89px;
-			padding-left: 20px;
-
-			&:active{
-				background-position: -291px -74px;
-			}
-
-			&.active, &.active:focus{
-				background-position: -291px -44px;
 			}
 		}
 

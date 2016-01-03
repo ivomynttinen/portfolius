@@ -1,12 +1,15 @@
 {
-  "name": "Portfolius",
+  "private": true,
+  "name": "portfolius",
+  "description": "A fancy new OS X App for Stock Portfolios.",
   "version": "0.1.0",
   "main": "main.js",
   "scripts": {
     "start": "node_modules/typescript/bin/tsc -p . --watch & gulp bundle"
   },
   "author": "Alexander Trefz & Ivo Mynttinen",
-  "license": "",
+  "contributors": [],
+  "license": "UNLICENSED",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "gulp": "^3.9.0",

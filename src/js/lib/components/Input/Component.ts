@@ -17,7 +17,8 @@ export default class Input extends knife.Component {
 		this.controller = new InputController({}, this)
 	}
 
-	_input() {
-		this.trigger('input')
+	_input(e) {
+		this.trigger('input', e.data)
+	}
 	}
 }

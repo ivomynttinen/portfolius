@@ -26,7 +26,7 @@ gulp.task('bundle', function() {
 	gulp.src('src/scss/screen.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./app/css'));
-	gulp.watch('src/**.scss').on('change', function() {
+	gulp.watch('src/**/*.scss').on('change', function() {
 		gulp.src('src/scss/screen.scss')
 			.pipe(sass().on('error', sass.logError))
 			.pipe(gulp.dest('./app/css'));

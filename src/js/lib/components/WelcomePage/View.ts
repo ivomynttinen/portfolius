@@ -52,7 +52,7 @@ export default class WelcomePageView extends knife.View {
 
 		this.noteLabel = new Label({ text: 'Note: you can adjust this later at any time.' })
 
-		this.createPortfolioButton = new Button({ text: 'Create Portfolio' })
+		this.createPortfolioButton = new Button({ text: 'Create Portfolio', isEnabled: false })
 
 		this.innerFooter.children.addRange([
 			this.noteLabel,
@@ -66,6 +66,14 @@ export default class WelcomePageView extends knife.View {
 		this._buildMainContainer()
 
 		this._buildFooter()
+
+		this.nameInput.on('input', () => {
+			if (this.nameInput.get('text').length) {
+				this.createPortfolioButton.sendCommand('Enable')
+			} else {
+				this.createPortfolioButton.sendCommand('Disable')
+			}
+		})
 
 		this.createPortfolioButton.on('click', () => {
 			let portfolio = {

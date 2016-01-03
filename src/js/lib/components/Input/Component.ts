@@ -12,7 +12,7 @@ export default class Input extends knife.Component {
 	}
 
 	initialize(options) {
-		this.model      = new InputModel({ text: options.text }, this)
+		this.model      = new InputModel({ text: options.text, placeholder: options.placeholder }, this)
 		this.view       = new InputView(Object.assign({}, options, { model: this.model }), this)
 		this.controller = new InputController({}, this)
 	}

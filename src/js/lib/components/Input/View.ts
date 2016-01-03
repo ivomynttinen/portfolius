@@ -22,6 +22,9 @@ export default class InputView extends knife.View {
 	render() {
 		super.render()
 
+		this.element.placeholder = this.model.get('placeholder')
+		this.element.textContent = this.model.get('text')
+
 		return this
 	}
 }

@@ -1,0 +1,71 @@
+.modal-tabs{
+  margin-top: -38px;
+  text-align: center;
+  background: #F5F6F7;
+  box-shadow: 0 -0.5px 0 0 rgba(0,0,0,0.03) inset;
+  height: 64px;
+  position: relative;
+
+  > button{
+    width: 66px;
+    text-align: center;
+    height: 60px;
+    margin-top: 4px;
+    border-radius: 4px 4px 0 0;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    padding: 30px 0 0 0;
+    position: relative;
+    color: rgba(0,0,0,0.7);
+
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 66px;
+      height: 60px;
+      background: $ui-sprite;
+      background-position-y: -190px;
+      opacity: .25;
+    }
+
+    &:active{
+      color: #000;
+
+      &:after{
+        opacity: .5;
+      }
+    }
+
+    &.active{
+      background: rgba(0,0,0,0.05);
+      color: #035ADD;
+
+      &:after{
+        background-position-y: -250px;
+        opacity: 1;
+      }
+
+      &:active:after{
+        opacity: 1;
+      }
+    }
+
+    &.buy:after{
+      background-position-x: -136px;
+    }
+
+    &.sell:after{
+      background-position-x: -202px;
+    }
+
+    &.dividends:after{
+      background-position-x: -268px;
+    }
+
+    &.transfer:after{
+      background-position-x: -334px;
+    }
+  }
+}

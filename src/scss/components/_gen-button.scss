@@ -1,0 +1,34 @@
+.gen-button{
+  background: #FFF;
+  border-radius: 3px;
+  color: #000;
+  height: 19px;
+  line-height: 19px;
+  padding: 0 14px;
+  font-size: 13px;
+  box-shadow: 0 0.5px 1px rgba(0,0,0,0.2), 0 0 0 0.5px rgba(0,0,0,0.1);
+
+  &:active,
+  &.submit{
+    color: #FFF;
+    background-image: linear-gradient(-180deg, #69B2FD 0%, #007AFF 100%);
+    box-shadow: 0 0.5px 1px rgba(0,0,0,0.2),
+                0 0.5px 0 #004EFF,
+                0 -0.5px 0 #419EFF,
+                0.5px 0 0 #0063FF,
+                -0.5px 0 0 #0063FF;
+  }
+
+  &.submit:active{
+    background-image: linear-gradient(-180deg, #4AA3FF 0%, #0063CE 100%);
+    box-shadow: 0 0.5px 1px rgba(0,0,0,0.2),
+                0 0.5px 0 #0033AB,
+                0 -0.5px 0 #0682F7,
+                0.5px 0 0 #0052C8,
+                -0.5px 0 0 #0052C8;
+  }
+
+  &.disabled{
+    opacity: .5;
+  }
+}

@@ -1,0 +1,125 @@
+.modal-content{
+  padding: 25px 25px 10px 25px;
+
+  hr{
+    margin: 15px auto;
+    border: none;
+    border-bottom: 1px solid #F0F0F0;
+  }
+}
+
+.modal-footer{
+  border-top: 1px solid #EBEBEB;
+  padding: 20px 25px 25px 25px;
+  text-align: right;
+
+  .submit{
+    margin-left: 16px;
+  }
+
+  .wrap{
+    margin: 0 auto;
+    width: 420px;
+  }
+}
+
+.input-row{
+  width: 420px;
+  margin: 0 auto 15px auto;
+  position: relative;
+
+  &.reduce-margin{
+    margin: 0 auto 5px auto;
+  }
+
+  .Label{
+    width: 100px;
+    padding-right: 12px;
+    text-align: right;
+    font-size: 13px;
+    display: inline-block;
+    float: left;
+    line-height: 25px;
+  }
+
+  .gen-input{
+    width: 320px;
+    height: 24px;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+  }
+
+  .search-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 25px;
+    border-radius: 0 2px 2px 0;
+
+    &:after{
+      content: "";
+      background: $ui-sprite;
+      background-position: -215px -120px;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 5px;
+      left: 8px;
+    }
+
+    &:active:after{
+      background-position: -235px -120px;
+    }
+  }
+
+  .note{
+    font-size: 12px;
+    padding-top: 5px;
+    display: inline-block;
+
+    &.big{
+      font-family: $sf-medium;
+      font-size: 13px;
+      padding-top: 4px;
+    }
+  }
+
+  .suffix{
+    position: absolute;
+    width: 23px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    top: 1px;
+    right: 1px;
+    font-size: 14px;
+    background: #FFF;
+  }
+
+  .small{
+    font-size: 10px;
+    opacity: .7;
+  }
+
+  textarea.gen-input{
+    padding-top: 4px;
+    resize: none;
+    height: 50px;
+  }
+
+  select{
+    width: 320px;
+    top: 2px;
+    position: relative;
+  }
+
+  .radio-group{
+    font-size: 13px;
+    padding-top: 4px;
+
+    label{
+      margin: 1px 20px 0 5px;
+    }
+  }
+}

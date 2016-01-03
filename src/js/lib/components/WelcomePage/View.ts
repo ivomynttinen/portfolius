@@ -52,7 +52,7 @@ export default class WelcomePageView extends knife.View {
 
 		this.noteLabel = new Label({ text: 'Note: you can adjust this later at any time.' })
 
-		this.createPortfolioButton = new Button({ text: 'Create Portfolio', isEnabled: false })
+		this.createPortfolioButton = new Button({ text: 'Create Portfolio', classes: 'gen-button submit', isEnabled: false })
 
 		this.innerFooter.children.addRange([
 			this.noteLabel,

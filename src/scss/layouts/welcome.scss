@@ -26,19 +26,8 @@
 		}
 
 		.Button{
-			background: $ui-sprite;
-			background-position: -208px -122px;
-			width: 122px;
-			height: 25px;
-			color: #FFF;
-			font-size: 13.5px;
-			text-align: center;
 			float: right;
 			margin-right: -1px;
-
-			&:active{
-				background-position: -208px -152px;
-			}
 		}
 
 		.wrap{

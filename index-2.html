@@ -1,0 +1,165 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="app/css/screen.css">
+	</head>
+	<body>
+		<div class="Modal">
+			<div class="modal-tabs">
+				<button class="buy active">Buy</button>
+				<button class="sell">Sell</button>
+				<button class="dividends">Dividends</button>
+				<button class="transfer">Transfer</button>
+			</div>
+			<div class="modal-content">
+
+				<div class="form buy">
+					<div class="input-row reduce-margin">
+						<label class="Label">Symbol:</label>
+						<input class="gen-input" type="text" placeholder="Enter symbol">
+						<button class="gen-button search-button"></button>
+					</div>
+					<div class="input-row">
+						<label class="Label">&nbsp;</label>
+						<span class="note">ComStage - MSCI World TRN UCITS ETF</span>
+					</div>
+					<hr>
+					<div class="input-row">
+						<label class="Label">Date:</label>
+						<input class="gen-input" type="date">
+					</div>
+					<div class="input-row">
+						<label class="Label">Pieces:</label>
+						<input class="gen-input" type="number" placeholder="Amount of pieces bought" min="0">
+					</div>
+					<div class="input-row">
+						<label class="Label">Price:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Price per piece">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">Fees:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Additional transaction costs">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">
+							<span>Value</span>
+							<span class="small">(incl. fees):</span>
+						</label>
+						<span class="note big">1.500,00 €</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">Comments:</label>
+						<textarea class="gen-input" placeholder="Enter an optional comment"></textarea>
+					</div>
+				</div>
+
+				<div class="form sell hidden">
+					<div class="input-row reduce-margin">
+						<label class="Label">Sell:</label>
+						<select>
+							<option>Comstage MSCI World TRN UCITS</option>
+							<option>iShares MSCI World TRN UCITS</option>
+						</select>
+					</div>
+					<hr>
+					<div class="input-row">
+						<label class="Label">Date:</label>
+						<input class="gen-input" type="date">
+					</div>
+					<div class="input-row">
+						<label class="Label">Pieces:</label>
+						<input class="gen-input" type="number" placeholder="Amount of pieces sold" min="0">
+					</div>
+					<div class="input-row">
+						<label class="Label">Price:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Price per piece">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">Fees:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Additional transaction costs">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">
+							<span>Value</span>
+							<span class="small">(incl. fees):</span>
+						</label>
+						<span class="note big">1.500,00 €</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">Comments:</label>
+						<textarea class="gen-input" placeholder="Enter an optional comment"></textarea>
+					</div>
+				</div>
+
+				<div class="form dividends hidden">
+					<div class="input-row reduce-margin">
+						<label class="Label">Payout:</label>
+						<select>
+							<option>Comstage MSCI World TRN UCITS</option>
+							<option>iShares MSCI World TRN UCITS</option>
+						</select>
+					</div>
+					<hr>
+					<div class="input-row">
+						<label class="Label">Date:</label>
+						<input class="gen-input" type="date">
+					</div>
+					<div class="input-row">
+						<label class="Label">Amount:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Total dividend">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">Taxes:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Taxes paid">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">
+							<span>Value</span>
+							<span class="small">(incl. tax):</span>
+						</label>
+						<span class="note big">1.500,00 €</span>
+					</div>
+				</div>
+
+				<div class="form transfer hidden">
+					<div class="input-row reduce-margin">
+						<label class="Label">Type:</label>
+						<div class="radio-group">
+							<input type="radio" checked name="transfer-type" id="deposit-radio">
+							<label for="deposit-radio">Deposit</label>
+							<input type="radio" name="transfer-type" id="withdraw-radio">
+							<label for="withdraw-radio">Withdrawal</label>
+						</div>
+					</div>
+					<hr>
+					<div class="input-row">
+						<label class="Label">Date:</label>
+						<input class="gen-input" type="date">
+					</div>
+					<div class="input-row">
+						<label class="Label">Amount:</label>
+						<input class="gen-input suffix-i" type="number" min="0" placeholder="Total amount">
+						<span class="suffix">€</span>
+					</div>
+					<div class="input-row">
+						<label class="Label">Comments:</label>
+						<textarea class="gen-input" placeholder="Enter an optional comment"></textarea>
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<div class="wrap">
+					<button class="gen-button">Cancel</button>
+					<button class="gen-button submit">Add Transaction</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

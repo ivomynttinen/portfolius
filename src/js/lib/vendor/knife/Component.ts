@@ -86,6 +86,10 @@ export default class Component extends EventMachine {
 	}
 
 	dispose():void {
+		// TODO: Dispose View
+		// TODO: Dispose Model
+		// TODO: Dispose Controller
+		// TODO: Make dispose hookable
 		for (let child of this.children) {
 			child.dispose()
 		}

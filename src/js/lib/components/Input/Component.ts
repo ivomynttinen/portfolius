@@ -8,6 +8,7 @@ export default class Input extends knife.Component {
 	_getCommandHandlers() {
 		return {
 			Input: '_input',
+			KeyUp: '_keyUp',
 		}
 	}
 
@@ -20,5 +21,8 @@ export default class Input extends knife.Component {
 	_input(e) {
 		this.trigger('input', e.data)
 	}
+
+	_keyUp(e) {
+		this.trigger('keyUp', e.data)
 	}
 }

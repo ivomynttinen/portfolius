@@ -16,8 +16,10 @@ export default class InputView extends knife.View {
 			this.model.set('text', this.element.value)
 			this.component.sendCommand('Input', e)
 		})
+
+		this.element.addEventListener('keyup', (e) => {
+			this.component.sendCommand('KeyUp', e)
 		})
-		// TODO: Implement placeholder
 	}
 
 	render() {

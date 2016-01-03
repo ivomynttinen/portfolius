@@ -22,4 +22,32 @@
 		right: 25px;
 		top: 22px;
 	}
+
+	.actions{
+		top: -7px;
+	}
+}
+
+.row .cell.h-date{
+	padding-left: 0;
+}
+
+.h-date, .h-type, .h-price{
+	width: 85px;
+}
+
+.h-desc{
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	-webkit-flex-basis: 0;
+	flex-basis: 0;
+}
+
+.h-pcs, .h-cost{
+	width: 65px;
+}
+
+.h-total{
+	width: 95px;
 }

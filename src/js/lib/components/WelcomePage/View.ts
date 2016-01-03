@@ -1,5 +1,5 @@
 import * as knife from '../../vendor/knife/knife'
-import Header from '../Header/Component'
+
 import Container from '../Container/Component'
 import Button from '../Button/Component'
 import Label from '../Label/Component'

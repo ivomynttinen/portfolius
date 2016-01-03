@@ -13,6 +13,7 @@
     "gulp-babel": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^1.6.0",
+    "gulp-sass": "^2.1.1",
     "typescript": "^1.8.0-dev.20151231"
   },
   "dependencies": {

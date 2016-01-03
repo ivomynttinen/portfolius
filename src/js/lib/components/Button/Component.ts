@@ -19,8 +19,8 @@ export default class Button extends knife.Component {
 		this.controller = new ButtonController({}, this)
 	}
 
-	_click() {
-		this.trigger('click')
+	_click(e) {
+		this.trigger('click', e.data)
 	}
 
 	_disable() {

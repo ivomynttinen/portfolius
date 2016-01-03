@@ -60,6 +60,7 @@
         "src/js/lib/components/WelcomePage/Controller.ts",
         "src/js/lib/components/WelcomePage/Model.ts",
         "src/js/lib/components/WelcomePage/View.ts",
+        "src/js/lib/shared/helpers.ts",
         "src/js/lib/shared/Portfolio.ts",
         "src/js/lib/shared/Stock.ts",
         "src/js/lib/shared/StockValuation.ts",

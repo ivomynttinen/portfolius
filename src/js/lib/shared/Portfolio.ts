@@ -3,7 +3,7 @@ import * as knife from '../vendor/knife/knife'
 import Stock from './Stock'
 import Transaction from './Transaction'
 
-interface IPortfolioData {
+interface IPortfolio {
 	_id:string
 	name:string
 	currency:string
@@ -12,8 +12,6 @@ interface IPortfolioData {
 }
 
 export default class Portfolio extends knife.EventMachine {
-	data:IPortfolioData
-
 	static find(...args) {
 		let portfolios = (window as any).db.portfolios
 		portfolios.find(...args)
@@ -44,9 +42,11 @@ export default class Portfolio extends knife.EventMachine {
 		portfolios.count(...args)
 	}
 
-	constructor(data:IPortfolioData) {
-		super()
-
-		this.data = data
+	static getValue(portfolio:IPortfolio) {
+		if (portfolio.transactionList.length) {
+			return 0
+		} else {
+			return 0
+		}
 	}
 }

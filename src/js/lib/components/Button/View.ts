@@ -2,7 +2,6 @@ import * as knife from '../../vendor/knife/knife'
 import Label from '../Label/Component'
 
 export default class ButtonView extends knife.View {
-	element:HTMLSpanElement
 	label:Label
 
 	getComponentName() {

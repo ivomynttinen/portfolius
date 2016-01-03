@@ -71,7 +71,9 @@ export default class Component extends EventMachine {
 		}
 
 		if (this.view.hasInvalidComponents()) {
-			this.view.renderComponents()
+			this.view.renderComponents({ force: true })
+		} else {
+			this.view.renderComponents({ force: false })
 		}
 
 		for (let child of this.children) {

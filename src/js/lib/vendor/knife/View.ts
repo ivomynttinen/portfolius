@@ -78,9 +78,9 @@ export default class View extends EventMachine {
 		return result
 	}
 
-	renderComponents():View {
+	renderComponents(options:any = {}):View {
 		for (let component of this.components) {
-			component.render({ force: true })
+			component.render({ force: options.force })
 		}
 
 		return this

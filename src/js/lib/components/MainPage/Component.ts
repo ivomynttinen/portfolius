@@ -6,7 +6,7 @@ import MainPageController from './Controller'
 
 import Portfolio from '../../shared/Portfolio'
 
-export default class Input extends knife.Component {
+export default class MainPage extends knife.Component {
 	_getCommandHandlers() {
 		return {
 

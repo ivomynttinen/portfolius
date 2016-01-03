@@ -25,7 +25,7 @@ export default class MainPageView extends knife.View {
 	_buildHeader() {
 		this.header = new Header({})
 
-		this.modeButtons = new Container({ classes: ['button-group', 'mode-buttons'] })
+		this.modeButtons       = new Container({ classes: ['button-group', 'mode-buttons'] })
 		this.transactionButton = new Button({ text: 'Transaction', classes: 'transaction' })
 
 		this.modeButtons.children.add(this.transactionButton)
@@ -33,7 +33,7 @@ export default class MainPageView extends knife.View {
 		this.viewButtons = new Container({ classes: ['button-group', 'view-buttons'] })
 
 		this.historyButton = new Button({ classes: 'history' })
-		this.lineButton = new Button({ classes: 'line' })
+		this.lineButton    = new Button({ classes: ['line', 'active'] })
 
 		this.viewButtons.children.addRange([
 			this.historyButton,

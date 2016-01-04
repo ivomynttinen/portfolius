@@ -66,3 +66,32 @@ gulp.task('build', function() {
 			.pipe(gulp.dest('app/'))
 	})
 })
+
+
+var electron = require('gulp-electron'),
+    packageJson = require('./package.json')
+
+gulp.task('electron', function() {
+
+	gulp.src("")
+	.pipe(electron({
+		asar: true,
+		src: './app',
+		packageJson: packageJson,
+		release: './release',
+		cache: './cache',
+		version: 'v0.36.2',
+		packaging: false,
+		platforms: ['darwin-x64'],
+		platformResources: {
+			darwin: {
+				CFBundleDisplayName: packageJson.productName,
+				CFBundleIdentifier: packageJson.name,
+				CFBundleName: packageJson.productName,
+				CFBundleVersion: packageJson.version,
+				icon: 'icon.icns'
+			}
+		}
+	}))
+	.pipe(gulp.dest(""))
+})

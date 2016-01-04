@@ -21,9 +21,7 @@ export default class View extends EventMachine {
 			classes = []
 		}
 
-		for (let klass of classes) {
-			this.element.classList.add(klass)
-		}
+		this.element.classList.add(...classes)
 	}
 
 	constructor(options:any = {}, component:Component) {

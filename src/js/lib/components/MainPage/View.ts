@@ -4,6 +4,8 @@ import Header from '../Header/Component'
 import Button from '../Button/Component'
 import Container from '../Container/Component'
 import Sidebar from '../Sidebar/Component'
+import TransactionWindow from '../TransactionWindow/Component'
+
 class PortfolioOverview extends knife.Component {}
 class PortfolioHistory extends knife.Component {}
 class Dark extends knife.Component {}
@@ -23,6 +25,7 @@ export default class MainPageView extends knife.View {
 	listsContainer:Container
 	portfolioOverview:PortfolioOverview
 	portfolioHistory:PortfolioHistory
+	transactionWindow:TransactionWindow
 
 
 	getComponentName() {
@@ -100,8 +103,10 @@ export default class MainPageView extends knife.View {
 		})
 
 		this.transactionButton.on('click', () => {
-			//TODO: Create newTransactionModal, 540 width
+			this.transactionWindow.sendCommand('Show')
 		})
+
+		this.transactionWindow = new TransactionWindow({})
 
 		this.model.on('set', (e, key, value) => {
 			if (key === 'portfolios') {
@@ -113,6 +118,7 @@ export default class MainPageView extends knife.View {
 		this.components.addRange([
 			this.header,
 			this.mainContainer,
+			this.transactionWindow,
 		])
 	}
 }

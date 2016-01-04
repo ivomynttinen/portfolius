@@ -1,6 +1,7 @@
 var app = require('app')
 var BrowserWindow = require('browser-window')
 
+//TODO: Fill in proper data
 require('crash-reporter').start({
 	productName: 'Portfolius',
 	companyName: 'edgespan',

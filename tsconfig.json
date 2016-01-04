@@ -19,7 +19,7 @@
         "!node_modules/**"
     ],
     "files": [
-        "src/js/browserInit.ts",
+        "src/js/app.ts",
         "src/js/lib/App/Component.ts",
         "src/js/lib/App/Controller.ts",
         "src/js/lib/App/Model.ts",

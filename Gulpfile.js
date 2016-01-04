@@ -6,7 +6,7 @@ var gulp   = require('gulp'),
 
 gulp.task('bundle', function() {
 	gulp.watch('tmp/**.js').on('change', function() {
-		gulp.src('tmp/browserInit.js')
+		gulp.src('tmp/app.js')
 			.pipe(rollup({
 				format: 'iife'
 			}))

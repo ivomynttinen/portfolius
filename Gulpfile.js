@@ -5,6 +5,7 @@ var gulp   = require('gulp'),
 	sass   = require('gulp-sass')
 
 gulp.task('bundle', function() {
+	// build JS
 	gulp.watch('tmp/**.js').on('change', function() {
 		gulp.src('tmp/app.js')
 			.pipe(rollup({
@@ -23,14 +24,7 @@ gulp.task('bundle', function() {
 			.pipe(gulp.dest('app/js/'))
 	})
 
-	gulp.src('src/img/**')
-		.pipe(gulp.dest('app/img/'))
-	gulp.watch('src/img/**').on('change', function() {
-		gulp.src('src/img/**')
-			.pipe(gulp.dest('app/img/'))
-	})
-
-
+	// build SASS
 	gulp.src('src/scss/screen.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./app/css'));
@@ -38,5 +32,29 @@ gulp.task('bundle', function() {
 		gulp.src('src/scss/screen.scss')
 			.pipe(sass().on('error', sass.logError))
 			.pipe(gulp.dest('./app/css'));
+	})
+
+	// Copy images
+	gulp.src('src/img/**')
+		.pipe(gulp.dest('app/img/'))
+	gulp.watch('src/img/**').on('change', function() {
+		gulp.src('src/img/**')
+			.pipe(gulp.dest('app/img/'))
+	})
+
+	// Copy window htmls
+	gulp.src('src/*.html')
+		.pipe(gulp.dest('app/'))
+	gulp.watch('src/*.html').on('change', function() {
+		gulp.src('src/*.html')
+			.pipe(gulp.dest('app/'))
+	})
+
+	// Copy main.js
+	gulp.src('src/main.js')
+		.pipe(gulp.dest('app/'))
+	gulp.watch('src/main.js').on('change', function() {
+		gulp.src('src/main.js')
+			.pipe(gulp.dest('app/'))
 	})
 })

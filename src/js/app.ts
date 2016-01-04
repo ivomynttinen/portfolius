@@ -13,10 +13,10 @@ interface IDB {
 }
 
 let db:IDB = {
-	stocks:          new Datastore({ filename: 'db/stocks',          autoload: true }),
-	stockValuations: new Datastore({ filename: 'db/stockValuations', autoload: true }),
-	transactions:    new Datastore({ filename: 'db/transactions',    autoload: true }),
-	portfolios:      new Datastore({ filename: 'db/portfolios',      autoload: true }),
+	stocks:          new Datastore({ filename: __dirname + '../db/stocks',          autoload: true }),
+	stockValuations: new Datastore({ filename: __dirname + '../db/stockValuations', autoload: true }),
+	transactions:    new Datastore({ filename: __dirname + '../db/transactions',    autoload: true }),
+	portfolios:      new Datastore({ filename: __dirname + '../db/portfolios',      autoload: true }),
 }
 
 // TODO: Handle Unexpected Errors via window.onerror

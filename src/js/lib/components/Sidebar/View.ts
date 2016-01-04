@@ -44,6 +44,14 @@ export default class SidebarView extends knife.View {
 
 		this._buildFooter()
 
+		this.refreshButton.on('click', () => {
+			// TODO: handle manual refresh
+		})
+
+		this.addButton.on('click', () => {
+			// TODO: Create addDialog
+		})
+
 		this.components.addRange([
 			this.summaryLabel,
 			this.portfolioHeadline,

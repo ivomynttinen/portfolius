@@ -92,6 +92,10 @@ export default class MainPageView extends knife.View {
 			this.component.trigger('removedLastPortfolio')
 		})
 
+		this.transactionButton.on('click', () => {
+			//TODO: Create newTransactionModal, 540 width
+		})
+
 		this.model.on('set', (e, key, value) => {
 			if (key === 'portfolios') {
 				this.sidebar.set('portfolios', value)

@@ -1,0 +1,13 @@
+{
+  "name": "portfolius",
+  "productName": "Portfolius",
+  "description": "A fancy new OS X App for Stock Portfolios.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Alexander Trefz & Ivo Mynttinen",
+  "contributors": [],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "nedb": "^1.5.1"
+  }
+}

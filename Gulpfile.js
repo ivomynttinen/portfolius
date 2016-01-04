@@ -58,11 +58,11 @@ gulp.task('build', function() {
 			.pipe(gulp.dest('app/'))
 	})
 
-	// Copy icon.icns
-	gulp.src('src/icon.icns')
+	// Copy disctribution package.json
+	gulp.src('src/package.json')
 		.pipe(gulp.dest('app/'))
-	gulp.watch('src/icon.icns').on('change', function() {
-		gulp.src('src/icon.icns')
+	gulp.watch('src/package.json').on('change', function() {
+		gulp.src('src/package.json')
 			.pipe(gulp.dest('app/'))
 	})
 })

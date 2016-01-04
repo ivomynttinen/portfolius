@@ -7,3 +7,6 @@ src/scss/.sass-cache
 .DS_Store
 *.codekit
 npm-debug.log
+
+cache/
+release/

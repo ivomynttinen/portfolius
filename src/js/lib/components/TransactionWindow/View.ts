@@ -36,7 +36,6 @@ export default class TransactionWindowView extends knife.View {
 	}
 
 	_clickHandler(e) {
-		console.log('click')
 		this.transactionWindow.focus()
 	}
 

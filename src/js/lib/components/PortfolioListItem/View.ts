@@ -93,6 +93,15 @@ export default class PortfolioListItemView extends knife.View {
 			e.preventDefault()
 			menu.popup(remote.getCurrentWindow())
 		})
+
+		window.document.addEventListener('click', (e) => {
+			this.component.sendCommand('Defocus')
+			this.component.sendCommand('FinishRename')
+		})
+
+		this.element.addEventListener('click', (e) => {
+			e.stopPropagation()
+		})
 	}
 
 	initialize() {

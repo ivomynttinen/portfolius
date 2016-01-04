@@ -105,7 +105,8 @@
         "src/js/lib/vendor/knife/hook/NamespacedHandler.ts",
         "src/js/lib/vendor/knife/knife.ts",
         "src/js/lib/vendor/knife/Model.ts",
-        "src/js/lib/vendor/knife/View.ts"
+        "src/js/lib/vendor/knife/View.ts",
+        "src/js/transactions.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

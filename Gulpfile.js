@@ -13,6 +13,14 @@ gulp.task('bundle', function() {
 			.pipe(babel())
 			.pipe(rename('app.js'))
 			.pipe(gulp.dest('app/js/'))
+
+		gulp.src('tmp/transactions.js')
+			.pipe(rollup({
+				format: 'iife'
+			}))
+			.pipe(babel())
+			.pipe(rename('transactions.js'))
+			.pipe(gulp.dest('app/js/'))
 	})
 
 	gulp.src('src/img/**')

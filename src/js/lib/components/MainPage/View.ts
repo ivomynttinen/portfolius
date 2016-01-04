@@ -4,6 +4,9 @@ import Header from '../Header/Component'
 import Button from '../Button/Component'
 import Container from '../Container/Component'
 import Sidebar from '../Sidebar/Component'
+class PortfolioOverview extends knife.Component {}
+class PortfolioHistory extends knife.Component {}
+class Dark extends knife.Component {}
 
 export default class MainPageView extends knife.View {
 	header:Header
@@ -16,6 +19,10 @@ export default class MainPageView extends knife.View {
 	mainContainer:Container
 	sidebar:Sidebar
 	overviewContainer:Container
+	dark:Dark
+	listsContainer:Container
+	portfolioOverview:PortfolioOverview
+	portfolioHistory:PortfolioHistory
 
 
 	getComponentName() {
@@ -53,11 +60,11 @@ export default class MainPageView extends knife.View {
 
 		this.overviewContainer = new Container({ classes: 'overview-container' })
 
-		this.dark = new Container({ classes: 'dark' })
+		this.dark = new Dark({ classes: 'dark' })
 
 		this.listsContainer    = new Container({ classes: 'lists' })
-		this.portfolioOverview = new Container({ classes: 'portfolio-overview hidden' })
-		this.portfolioHistory  = new Container({ classes: 'history-container' })
+		this.portfolioOverview = new PortfolioOverview({ classes: 'portfolio-overview hidden' })
+		this.portfolioHistory  = new PortfolioHistory({ classes: 'history-container' })
 
 		this.listsContainer.children.addRange([
 			this.portfolioOverview,

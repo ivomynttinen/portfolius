@@ -57,4 +57,12 @@ gulp.task('build', function() {
 		gulp.src('src/main.js')
 			.pipe(gulp.dest('app/'))
 	})
+
+	// Copy icon.icns
+	gulp.src('src/icon.icns')
+		.pipe(gulp.dest('app/'))
+	gulp.watch('src/icon.icns').on('change', function() {
+		gulp.src('src/icon.icns')
+			.pipe(gulp.dest('app/'))
+	})
 })

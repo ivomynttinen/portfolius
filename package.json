@@ -2,8 +2,8 @@
   "private": true,
   "name": "portfolius",
   "description": "A fancy new OS X App for Stock Portfolios.",
-  "version": "0.1.0",
   "main": "main.js",
+  "version": "1.0.0",
   "scripts": {
     "start": "node_modules/typescript/bin/tsc -p . --watch & gulp bundle"
   },

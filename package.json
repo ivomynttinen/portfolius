@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "main": "app/main.js",
   "scripts": {
-    "start": "node_modules/typescript/bin/tsc -p . --watch & gulp bundle"
+    "start": "node_modules/typescript/bin/tsc -p . --watch & gulp build"
   },
   "author": "Alexander Trefz & Ivo Mynttinen",
   "contributors": [],

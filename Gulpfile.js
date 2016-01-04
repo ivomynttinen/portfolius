@@ -4,7 +4,7 @@ var gulp   = require('gulp'),
 	rename = require('gulp-rename'),
 	sass   = require('gulp-sass')
 
-gulp.task('bundle', function() {
+gulp.task('build', function() {
 	// build JS
 	gulp.watch('tmp/**.js').on('change', function() {
 		gulp.src('tmp/app.js')
